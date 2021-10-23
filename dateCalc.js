@@ -10,19 +10,25 @@ const dateB = new Date("Novemeber 12, 2021 17:00:00")
 const dateC = new Date("Novemeber 10, 2021 17:00:00")
 
 if (timeZone > 0) {
-    elementT.innerHTML = "UTC " + ((-timeZone) / 60)
+    elementT.innerHTML = " UTC " + ((-timeZone) / 60)
 } else {
-    elementT.innerHTML = "UTC +" + ((-timeZone) / 60)
+    elementT.innerHTML = " UTC +" + ((-timeZone) / 60)
 }
 
 function getDateDiff(date, timezone) {
 
-    let dateDifference = (date - new Date().getTime()) + ((-timezone) * (1000 * 60))
+    let dateDifference = date - (new Date().getTime() + (-timezone * 1000 * 60))
 
     let days = Math.floor(dateDifference / (1000 * 60 * 60 * 24))
     let hours = Math.floor((dateDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
     let minutes = Math.floor((dateDifference % (1000 * 60 * 60)) / (1000 * 60))
     let seconds = Math.floor((dateDifference % (1000 * 60)) / 1000)
+
+    // if (timeZone > 0) {
+    //     elementT.innerHTML = timeZone + " UTC " + ((-timeZone) / 60) + " " + ((-timeZone) * (1000 * 60)) + " " + hours
+    // } else {
+    //     elementT.innerHTML = timeZone + " UTC +" + ((-timeZone) / 60) + " " + ((-timeZone) * (1000 * 60)) + " " + hours
+    // }
 
     return [days, hours, minutes, seconds]
 }
