@@ -1,0 +1,19 @@
+h4 {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+p {
+    margin: 10px;
+}
+
+.estimate {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+#counts, #timezone {
+    position: relative;
+    text-align: center;
+}
