@@ -1,3 +1,20 @@
+const timeZone = new Date().getTimezoneOffset()
+
+const elementT = document.getElementById("ctimezone")
+const elementA = document.getElementById("diffRelease")
+const elementB = document.getElementById("diffOrdered")
+const elementC = document.getElementById("diffPreLoad")
+
+const dateA = new Date("Novemeber 19, 2021 17:00:00")
+const dateB = new Date("Novemeber 12, 2021 17:00:00")
+const dateC = new Date("Novemeber 10, 2021 17:00:00")
+
+if (timeZone > 0) {
+    elementT.innerHTML = "UTC " + ((-timeZone) / 60)
+} else {
+    elementT.innerHTML = "UTC +" + ((-timeZone) / 60)
+}
+
 function getDateDiff(date, timezone) {
 
     let dateDifference = (date - new Date().getTime()) + ((-timezone) * (1000 * 60))
@@ -11,18 +28,6 @@ function getDateDiff(date, timezone) {
 }
 
 setInterval(() => {
-
-    const timeZone = new Date().getTimezoneOffset()
-
-    document.getElementById("ctimezone").innerHTML = "UTC" + ((-timeZone) / 60)
-
-    const elementA = document.getElementById("diffRelease")
-    const elementB = document.getElementById("diffOrdered")
-    const elementC = document.getElementById("diffPreLoad")
-
-    const dateA = new Date("Novemeber 19, 2021 17:00:00")
-    const dateB = new Date("Novemeber 12, 2021 17:00:00")
-    const dateC = new Date("Novemeber 10, 2021 17:00:00")
 
     let diffA = getDateDiff(dateA, timeZone)
     let diffB = getDateDiff(dateB, timeZone)
