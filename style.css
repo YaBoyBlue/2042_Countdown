@@ -14,6 +14,10 @@ body {
     margin: 0;
 }
 
+main {
+    min-height: 100vh;
+}
+
 h3, p {
     color: white;
     text-shadow: 2px 2px hsla(0, 0%, 0%, 0.5);
@@ -21,21 +25,32 @@ h3, p {
 
 h3{
     font-family: Unica_One;
-    font-size: 22px;
+    font-size: 27px;
     text-transform: uppercase;
     margin-top: 50px;
     margin-bottom: 0px;
 }
 
 p {
-    margin: 10px;
+    margin: 20px;
     font-family: Lora;
+}
+
+#line {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50vh;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .estimate {
     margin-top: 0px;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 #ctimezone {
@@ -44,11 +59,17 @@ p {
 }
 
 #counts, #timezone {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
 #footer {
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
