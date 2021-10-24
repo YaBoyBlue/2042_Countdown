@@ -9,20 +9,21 @@
         <main>
             <div id="line"></div>
             <section id="counts">
+                <p class="title">Time to Full Release</p>
+                <p class="time" id="diffRelease"></p>
+
+                <p class="title">Time to Early Release</p>
+                <p class="time" id="diffOrdered"></p>
+
+                <p class="title">Time to Preload</p>
+                <p class="time" id="diffPreLoad"></p>
+
                 <p id="ctimezone">TIMEZONE</p>
-                <h3 class="test">Time to Full Release</h3>
-                <p class="estimate"><EM>(Estimate, will be updated)</EM></p>
-                <p id="diffRelease"></p>
-                <h3>Time to Early Release</h3>
-                <p class="estimate"><EM>(Estimate, will be updated)</EM></p>
-                <p id="diffOrdered"></p>
-                <h3>Time to Preload</h3>
-                <p id="diffPreLoad"></p>
-                <script src="dateCalc.js"></script>
             </section>
             <footer id="footer">
                 <p>Preload data gathered from Origin Client.</p>
             </footer>
+            <script src="dateCalc.js"></script>
         </main>
     </body>
 </html>

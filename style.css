@@ -1,4 +1,11 @@
 @font-face {
+    font-family: Unica_One;
+    src: url(/fonts/Unica_One_New/UnicaOne-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: Lora;
     src: url(/fonts/Lora/Lora-Regular.ttf);
     font-weight: normal;
@@ -32,13 +39,13 @@ h3{
 }
 
 p {
-    margin: 20px;
+    margin: 10px;
     font-family: Lora;
 }
 
 #line {
     background-color: rgba(0, 0, 0, 0.5);
-    width: 50vh;
+    width: 550px;
     height: 100vh;
     position: absolute;
     top: 50%;
@@ -49,16 +56,35 @@ p {
 
 .estimate {
     margin-top: 0px;
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: rgb(201, 201, 201);
 }
 
 #ctimezone {
     margin-top: 0;
     padding-top: 20px;
+    text-align: right;
 }
 
-#counts, #timezone {
+.title {
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+.time {
+    font-size: 25px;
+    text-align: center;
+}
+
+#counts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#timezone {
     position: absolute;
     top: 50%;
     left: 50%;
