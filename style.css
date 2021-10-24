@@ -40,7 +40,7 @@ h3{
 
 p {
     margin: 10px;
-    font-family: Lora;
+    /* font-family: Lora; */
 }
 
 #line {
@@ -62,14 +62,14 @@ p {
 }
 
 #ctimezone {
-    margin-top: 0;
+    margin-bottom: 20px;
     padding-top: 20px;
     text-align: right;
 }
 
 .title {
     text-transform: uppercase;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .time {
