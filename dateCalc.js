@@ -1,4 +1,4 @@
-let timeZone = new Date().getTimezoneOffset()
+let timeZone = -new Date().getTimezoneOffset()
 
 const elementT = document.getElementById("ctimezone")
 const elementA = document.getElementById("diffRelease")
@@ -9,8 +9,8 @@ const dateA = new Date("Novemeber 19, 2021 17:00:00")
 const dateB = new Date("Novemeber 12, 2021 17:00:00")
 const dateC = new Date("Novemeber 10, 2021 17:00:00")
 
-if (timeZone > 0) {
-    elementT.innerHTML = "UTC " + ((-timeZone) / 60)
+if (timeZone < 0) {
+    elementT.innerHTML = "UTC " + ((timeZone) / 60)
 } else {
     elementT.innerHTML = "UTC +" + ((-timeZone) / 60)
 }
@@ -18,7 +18,7 @@ if (timeZone > 0) {
 function getDHMS(timeDes, timeZssone) {
 
     //const timeDesired = timeDes.getTime()
-    const timeUTC = new Date().getTime() + timeZone * 60 * 1000
+    const timeUTC = new Date().getTime() + -timeZone * 60 * 1000
 
     let dateDifference = timeDes - timeUTC
 
