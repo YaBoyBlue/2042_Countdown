@@ -9,11 +9,11 @@ const dateA = new Date("Novemeber 19, 2021 17:00:00")
 const dateB = new Date("Novemeber 12, 2021 17:00:00")
 const dateC = new Date("Novemeber 10, 2021 17:00:00")
 
-// if (timeZone > 0) {
-//     elementT.innerHTML = timeZone + " UTC " + ((-timeZone) / 60) + " " +  - (timeZone * 1000 * 60)
-// } else {
-//     elementT.innerHTML = timeZone + " UTC +" + ((-timeZone) / 60) + " " +  - (timeZone * 1000 * 60)
-// }
+if (timeZone > 0) {
+    elementT.innerHTML = "UTC " + ((-timeZone) / 60)
+} else {
+    elementT.innerHTML = "UTC +" + ((-timeZone) / 60)
+}
 
 function getDHMS(timeDes, timeZssone) {
 
@@ -22,7 +22,7 @@ function getDHMS(timeDes, timeZssone) {
 
     let dateDifference = timeDes - timeUTC
 
-    elementT.innerHTML = timeZone / 60
+    //elementT.innerHTML = "UTC " timeZone / 60
 
     let days = Math.floor(dateDifference / (1000 * 60 * 60 * 24))
     let hours = Math.floor((dateDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
